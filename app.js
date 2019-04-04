@@ -6,42 +6,34 @@ let modelsPhone = [
     {id:4,name:"xiaomi",price:193}
 ];
 
-let bankAccount;
-
-let checkBankAccount= () =>{
-    bankAccount = prompt("Enter the amount of money in the bank account");
-};
 
 
 let proverka =() =>{
-    checkBankAccount();
-    if (bankAccount == parseInt(bankAccount)){
-        console.log(bankAccount+" You entered number");
-        return bankAccount;
-    }
-    else{
-        console.log("You dont entered number");
-        proverka();
-    }
+    // let bankAccount = parseInt(prompt("Enter the amount of money in the bank account"));
+    // if (bankAccount){
+    //     console.log(bankAccount+" You entered number");
+    //     return bankAccount;
+    // }
+    // else{
+    //     console.log("You dont entered number");
+    //     return proverka();
+    // }
+    var money = document.getElementById("exampleInputEmail1");
+    console.log(money.value);
+    document.getElementById("formMoney").style.display="none";
 };
-let a = proverka();
-console.log(a);
 
-// function  checkBankAccount() {
-//     return  bankAccount = prompt("Enter the amount of money in the bank account!!!!");
-// }
+
+// let a = proverka();
+// console.log('Уou have money in the account - '+a+' $' );
+
+console.log(modelsPhone);
+
+var el = document.getElementById("elem");
+el.addEventListener("click", proverka);
+
+// elem.addEventListener("click",(e)=>{
+//     current_page = e.target.dataset.link;
+//     renderProducts(array_products);
 //
-// function proverka() {
-//     checkBankAccount();
-//     if (bankAccount == parseInt(bankAccount)){
-//         console.log(bankAccount+" You entered number");
-//         return bankAccount;
-//     }
-//     else{
-//         console.log("You dont entered number");
-//         proverka();
-//     }
-// };
-//
-// let b = proverka();
-// console.log(b+"10");
+// });
